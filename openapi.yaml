@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: FastAPI
+  version: 0.1.0
+paths:
+  /logo.png:
+    get:
+      summary: Plugin Logo
+      operationId: plugin_logo_logo_png_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /.well-known/ai-plugin.json:
+    get:
+      summary: Plugin Manifest
+      operationId: plugin_manifest__well_known_ai_plugin_json_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /openapi.yaml:
+    get:
+      summary: Openapi Spec
+      operationId: openapi_spec_openapi_yaml_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /recommend/:
+    get:
+      summary: Recommend
+      operationId: recommend_recommend__get
+      parameters:
+        - name: location
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Location
+        - name: service
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Service
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            title: Number
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
+
