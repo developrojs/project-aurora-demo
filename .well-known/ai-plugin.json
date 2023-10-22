@@ -9,9 +9,9 @@
     },
     "api": {
       "type": "openapi",
-      "url": "http://http://18.119.130.104/openapi.yaml"
+      "url": "https://project-aurora-demo.replit.app/openapi.yaml"
     },
-    "logo_url": "http://http://18.119.130.104//logo.png",
+    "logo_url": "https://project-aurora-demo.replit.app/logo.png",
     "contact_email": "legal@example.com",
     "legal_info_url": "http://example.com/legal"
   }
