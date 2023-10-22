@@ -1,3 +1,6 @@
 fastapi[all]
 uvicorn
 uvicorn[standard]
+pydantic
+passlib
+python-jose[cryptography]

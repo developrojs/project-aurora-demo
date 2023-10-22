@@ -1,0 +1,5 @@
+run = "pip install -r requirements.txt"
+
+[deployment]
+run = ["sh", "-c", "python main.py"]
+deploymentTarget = "cloudrun"
