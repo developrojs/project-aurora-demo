@@ -2,8 +2,8 @@
     "schema_version": "v1",
     "name_for_human": "Aurora",
     "name_for_model": "aurora",
-    "description_for_human": "A location based recommendation service for entertainment, fitness and training businesses",
-    "description_for_model": "Plugin for recommending services on entertainment, fitness and training based on city/state name or zip code.",
+    "description_for_human": "A location based recommendation service for entertainment, movies, movie showtimes, movie theaters, fitness and training businesses",
+    "description_for_model": "Plugin for recommending services on entertainment, movies, movie showtimes, movie theaters, fitness and training based on city/state name or zip code.",
     "auth": {
       "type": "none"
     },
